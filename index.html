@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="description"
         content="Formal Concept Lattices are Good Semantic Scaffolds for Concept-Based Learning">
-  <meta name="keywords" content="Concepts, Interpretability, Formal Concept Analysis, Lattice">
+  <meta name="keywords" content="Concepts, Propositional Logic, Differentiable Logic, Interpretability">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Formal Concept Lattices are Good Semantic Scaffolds for Concept-Based Learning</title>
   
@@ -58,29 +58,26 @@
             <span class="author-block">
               <a href="https://deepikavemuri.github.io/">Deepika SN Vemuri</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="">Sayanta Adhikari</a><sup>1,2</sup>,</span>
+              <a href="https://gauthambellamkonda.github.io">Gautham Bellamkonda</a><sup>1,3</sup>,</span>
             <span class="author-block">
-              <a href="">Ankit Saha</a><sup>1</sup>,
+              <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=gzhFqqwAAAAJ">Aditya Pola</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="">Krishn Vishwas Kher</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://people.iith.ac.in/vineethnb/">Vineeth N Balasubramanian</a><sup>1,3</sup>
+              <a href="https://people.iith.ac.in/vineethnb/">Vineeth N Balasubramanian</a><sup>1,2</sup>
             </span>
           </div>
 
           <div class="is-size-6 publication-authors">
             <span class="author-block"><sup>1</sup>IIT Hyderabad, </span>
-            <span class="author-block"><sup>2</sup>Amazon, India</span>
-            <span class="author-block"><sup>3</sup>Microsoft Research</span>
+            <span class="author-block"><sup>2</sup>Microsoft Research, </span>
+            <span class="author-block"><sup>3</sup>KLA</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="static/assets/pdf/LogicCBMs_WACV.pdf"
+                <a href="static/assets/pdf/FoCA_CBMs_ICML_26_CameraReady.pdf"
                    class="external-link button is-normal">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -90,7 +87,7 @@
               </span>
 
               <span class="link-block">
-                <a href="https://www.arxiv.org/abs/2512.07383"
+                <a href="https://arxiv.org/abs/2606.05471"
                    class="external-link button is-normal">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -101,7 +98,7 @@
 
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/deepikavemuri/LogicCBMs"
+                <a href="https://github.com/deepikavemuri/FoCA-CBMs"
                    class="external-link button is-normal">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -121,10 +118,11 @@
   <div class="container is-max-desktop">
     <div class="hero-body has-text-centered">
       <!-- <video id="teaser" autoplay muted loop playsinline height="100%"> -->
-        <img src="./static/images/logiccbms_teaser.png" alt="LogicCBMs teaser" style="max-width:100%;height:auto;" />
+        <img src="./static/images/teaser.png" alt="LogicCBMs teaser" style="max-width:100%;height:auto;" />
       <!-- </video> -->
       <h2 class="subtitle has-text-centered">
-        <span class="coolname">LogicCBMs</span> introduce differentiable logic gates into concept-based models.
+        In classification tasks where each class is defined by a set of attributes, a natural semantic hierarchy emerges from the pattern of attribute sharing. Attributes shared by many
+        classes are general, while those shared by a few are specific
       </h2>
     </div>
   </div>
@@ -233,9 +231,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Concept Bottleneck Models (CBMs) provide a basis for semantic abstractions within a neural network architecture. Such models have primarily been seen through the lens of interpretability so far, wherein they offer transparency by inferring predictions as a linear combination of semantic concepts. However, a linear combination is inherently limiting. So we propose the enhancement of concept-based learning models through propositional logic.
-            We introduce a logic module that is carefully designed to connect the learned concepts from CBMs through differentiable logic operations, such that our proposed LogicCBM can go beyond simple weighted combinations of concepts to leverage various logical operations to yield the final predictions, while maintaining end-to-end learnability. Composing concepts using a set of logic operators enables the model to capture inter-concept relations, while simultaneously improving the expressivity of the model in terms of logic operations.
-            Our empirical studies on well-known benchmarks and synthetic datasets demonstrate that these models have better accuracy, perform effective interventions and are highly interpretable.
+            Learning semantics is essential for deep learning models to be interpretable and better aligned with human reasoning. Concept-based models approach this by representing classes through meaningful
+            semantic abstractions, but typically treat all concepts as a flat, unstructured set learned at a single neural network layer. This overlooks a fundamental property of human semantic understanding:
+            concepts being organized hierarchically, from general to specific. While deep networks do learn a hierarchy of visual features, this structure is rarely aligned with explicit semantic hierarchies.
+            Drawing on Formal Concept Analysis, we demonstrate that formal concept lattices provide principled semantic scaffolds to guide neural network learning. These lattices naturally identify where in the network concepts should be learned
+            based on their level of generality. This allows the model to develop staged, semantically grounded representations throughout its depth. Empirical results on real-world datasets show that our models produce more interpretable embeddings,
+            support more effective interventions, and learn concept representations that are both meaningful and hierarchically structured.
           </p>
         </div>
       </div>
@@ -267,7 +268,7 @@
       </div>
     </div>
     <div class="arch-figure">
-      <img src="./static/images/logiccbms_arch2.png" alt="LogicCBMs architecture" />
+      <img src="updated_architecture.pdf" alt="LogicCBMs architecture" />
     </div>
     <br/>
     <br/>
