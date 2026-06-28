@@ -132,101 +132,11 @@
 </section>
 
 
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <video poster="" id="clustering" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/clustering.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item">
-          <video poster="" id="roundabout-nav" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/roundabout nav.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item">
-          <video poster="" id="tm-baymax" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tm baymax.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item">
-          <video poster="" id="text-query-somewhere-to-sit" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/text query somewhere to sit.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item">
-          <video poster="" id="image-query-cabinet" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/image query cabinet.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item">
-          <video poster="" id="audio-query-doorknock" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/audio query doorknock.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item">
-          <video poster="" id="click-query-cabinet" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/click query cabinet.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item">
-          <video poster="" id="clustering-outdoors" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/clustering outdoors.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item">
-          <video poster="" id="football-field-nav" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/football field nav.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item">
-          <video poster="" id="tm-caterpillar" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tm caterpillar.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item">
-          <video poster="" id="tm-purple" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tm purple.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item">
-          <video poster="" id="tm-spindrift" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/tm spindrift.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 
 
 <section class="section">
   <div class="container is-max-desktop">
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/rkXgws8fiDs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div> -->
-    <!--/ Paper video. -->
 
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -246,6 +156,20 @@
     </div>
     <!--/ Abstract. -->
 
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Key Contributions</h2>
+        <div class="content has-text-justified">
+          <ul>
+            <li><strong>Formal Concept Lattices for Neural Networks:</strong> We propose a principled method to incorporate formal concept lattices into deep neural networks as semantic scaffolds that guide concept learning through the network depth.</li>
+            <li><strong>Hierarchical Concept Organization:</strong> Our approach naturally organizes concepts hierarchically based on their level of generality, aligning the learned representations with human semantic understanding.</li>
+            <li><strong>Improved Interpretability and Interventions:</strong> By structuring concepts hierarchically, FoCA-CBMs enable more effective and targeted concept interventions, improving both interpretability and model performance.</li>
+            <li><strong>Comprehensive Evaluation:</strong> We demonstrate superior performance on multiple real-world datasets (ImageNet100, CIFAR100, AwA2) with detailed analysis of embedding quality, intervention effectiveness, and qualitative concept visualizations.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -255,18 +179,8 @@
 
   <div class="columns is-centered is-vcentered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Approach</h2>
+        <h2 class="title is-3">Formal Concepts for Deep Neural Networks</h2>
 
-        <!-- Interpolating. -->
-        <!-- <h3 class="title is-4">Construct pixel-aligned features</h3>
-        <div class="content has-text-justified"> -->
-          <p>
-            We introduce LogicCBMs, a technique to introduce logic operations into concept-based learning models in an end-to-end differentiable manner.
-            As shown in the below figure, we introduce a logic module (which can consist of multiple logic gate layers) following the concept encoder to extract logical predicates, 
-            which are then sent to a classifier. There are two steps involved to learn predicates: (i) Concept pairing, and (ii) Differentiable logic learning.
-            We introduce two weight matrices for this: a concept pair matrix \( CP_{p×k} \) and a logic gate matrix \( G_{p×q} \).
-          </p>
-        <!-- </div> -->
         <br/>
       </div>
     </div>
@@ -276,81 +190,30 @@
     <br/>
     <br/>
     <p>
-      In order to determine the concept pairs, we extract the two concepts with the highest weight per row, which gives us a set of \( p \) concept pairs.
-      Since logic gates are by themselves non-differentiable operations, they pose a constraint in incorporating them into end-to-end learnable
-      architectures. In order to overcome this constraint, we use t-norms, which are the fuzzy versions of logic gates to
-      allow differentiability and backpropagation while passing the pairwise activations of the concept encoder through the logic layer.
-      For each of the p logic neurons, we compute all \( q \) fuzzy logic operations on the concept pair assigned to it and learn a probability distribution to represent how important a logic
-      gate is for that concept pair. The probability distribution for each logic neuron is learned by the G matrix.
+      Formal Concept Analysis (FCA) provides a mathematical framework for understanding hierarchical relationships in data. 
+      In FoCA-CBMs, we leverage formal concept lattices to create structured semantic hierarchies in concept-based models. 
+      The key insight is that concepts naturally emerge at different levels of generality in neural networks. 
+      Attributes shared by many classes are general (appearing in shallow layers), while those specific to few classes are specialized (appearing in deeper layers). 
+      This allows us to guide where concepts should be learned throughout the network depth, creating a coherent semantic structure aligned with human reasoning.
     </p>
-    <br/>
-    <br/>
-    <br/>
+   <br/>
+   <br/>
+   <br/>
 
-    <!-- <div class="columns is-centered"> -->
-
-      <!-- Zero-shot pixel alignment -->
-      <!-- <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Zero-shot pixel alignment</h2>
-          <div class="interpolation-image-wrapper-zero-shot">
-            <img src="./static/images/pixel-aligned-feature-computation.png" />
-          </div>
-          <p>
-            For each image, the global (f<sub>G</sub>) and local (f<sub>L</sub>) features are fused to obtain our pixel-aligned features (f<sub>P</sub>). <i>Top-left</i>: We first compute cosine similarities between each local feature (f<sub>L</sub>) with the global feature (f<sub>G</sub>). <i>Top-right</i>: We compute an inter-feature similarity matrix, and compute the average similarity of each local feature to every other local feature, denoted φ̄<sub>i</sub> . <i>Bottom-left</i>: We combine these similarities to produce weights for fusing f<sub>G</sub> and f<sub>L</sub> to obtain pixel-aligned features f<sub>P</sub>.
-          </p>
-        </div>
-      </div> -->
-      <!--/ Zero-shot pixel alignment -->
-
-      <!-- Long-tailed concepts -->
-      <!-- <div class="column">
-        <h2 class="title is-3">Retaining fine-grained concepts</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <div class="interpolation-image-wrapper-fine-grained">
-              <img src="./static/images/pixel-aligned-qualitative.png" />
-            </div>
-            <p>
-              Our approach to computing pixel-aligned features is adept at capturing long-tailed and fine-grained concepts. The plots to the right show the similarity scores between the embeddings of the cropped image regions corresponding to diet coke, lysol, and yogurt and their text embeddings, predicted by the base CLIP model used by LSeg and OpenSeg respectively. This implies that the base CLIP models know these concepts, yet, as can be seen on the tiled plots (center), LSeg and OpenSeg are not able to retrieve these concepts; they forget the concepts when finetuned. On the other hand, our zero-shot pixel-alignment approach does not suffer this drawback, and clearly delineates the corresponding pixels.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </div> -->
-    <!--/ Long-tailed concepts -->
-
-
-  <div class="columns is-centered">
-      <div class="column is-half">
-        <div class="content">
-          <h2 class="title is-3">CLEVR-Logic Dataset</h2>
-          <p>
-            Real-world datasets do not have explicit logic supervision, so it is not straightforward to assess the correctness of the logic. So, we propose a new variant of CLEVR: <i>CLEVR-Logic</i>, where we specify the class-level logic and use it to generate each image.
-            In CLEVR-Logic, concepts are CLEVR objects (sphere, cone, cube, cylinder) and classes are specified as logical operations among these objects. For example, sphere \( \oplus \) cone could be one class which has images that exclusively contain either a sphere or a cone. CLEVR images are then generated per class following the class-specific logic.
-          </p>
-        </div>
-      </div>
-
-      <div class="column is-half">
-        <div class="content has-text-centered">
-          <div class="interpolation-image-wrapper-uncoco">
-            <img class="clevr-figure" src="./static/images/clevr_modified.png" alt="CLEVR-Logic dataset visualization" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <h2 class="title is-3">CCG Metric</h2>
+   <div class="columns is-centered">
+     <div class="column is-full">
+        <h2 class="title is-3">Experiments and Analysis</h2>
         <div class="content">
           <p>
-            Concept-based interpretable models are especially of importance in high-risk scenarios where there may be a high cost associated with an erroneous decision. We hence propose a metric to study CBM-related models in such a worst-case setting. 
-            Our evaluation is based on test-time corrections of concepts (or predicates). For each sample, we identify the most misleading concept (or predicate) and turn it off (or on, depending on ground truth for a given example). We then measure the resulting change in the model’s prediction confidence.
-            We term this quantity as the <i>Concept Correction Gain</i> (CCG). 
+            We evaluate FoCA-CBMs on real-world datasets including ImageNet100, CIFAR100, and AwA2. 
+            Our experiments demonstrate that formal concept lattices significantly improve the quality of learned representations compared to flat concept-based models. 
+            Key findings include:
           </p>
+          <ul>
+            <li><strong>Better Interpretability:</strong> Embeddings are more aligned with semantic hierarchies, making the model's decisions more explainable</li>
+            <li><strong>Effective Interventions:</strong> Concept-based interventions are more targeted and effective when concepts are organized hierarchically</li>
+            <li><strong>Robust Concept Learning:</strong> Hierarchically-structured concepts are more stable and consistent across different runs</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -360,109 +223,90 @@
     <div class="columns is-centered">
       <div class="column is-full">
         <div class="content has-text-centered">
-          <img class="ccg_figure" src="./static/images/ccg_qual.png" alt="CCG qualitative results" />
+          <img class="main_table" src="./static/images/main_table.png" alt="FoCA main table" />
         </div>
       </div>
     </div>
 
-    <!--/ Click-query video -->
+    <!--/ Main Results Table -->
 
-  <!-- </div>
-</section> -->
-
-
-<!-- <section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">Experiments on real robotic systems</h2>
-    <div class="columns is-centered"> -->
-
-      <!-- Tabletop rearrangement -->
-      <!-- <div class="column">
-        <div class="content">
-          <h3 class="title is-3">Tabletop rearrangement</h3>
-          <div class="interpolation-image-wrapper-tabletop">
-            <img src="./static/images/rearrangement.png" />
-          </div>
+    <!-- Embedding Analysis -->
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Embedding Hierarchy Analysis</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/embedding_clusters.png" alt="Embedding clusters showing hierarchical organization" style="max-width: 100%; height: auto;" />
+        </div>
+        <div class="content has-text-justified">
           <p>
-            The robot is provided with rearrangment goals involving novel objects. (Top row) push goldfish to the right of the yellow line, where goldfish refers to the brandname of the pack of Cheddar snack. (Bottom row) push baymax to the right of the yellow line, where baymax refers to the plush toy depicting the famous Disney character.
+            Our analysis shows that FoCA-CBMs naturally organize concept embeddings into hierarchical clusters. General concepts (shared by many classes) 
+            form larger, more overlapping clusters, while specialized concepts (specific to few classes) form distinct, well-separated clusters. 
+            This hierarchical organization emerges naturally from the formal concept lattice structure without explicit clustering constraints.
           </p>
         </div>
-      </div> -->
-      <!--/ Tabletop rearrangement -->
+      </div>
+    </div>
+    <br/>
 
-      <!-- Self-driving -->
-      <!-- <div class="column">
-        <h3 class="title is-3">Autonomous driving</h3>
-        <div class="columns is-centered">
-          <div class="column content">
-            <img src="./static/images/driving.png" />
-            <p>
-              (Left to right; top to bottom) Autonomous drive-by-wire platform deployed; pointcloud map of the environment with the response to the openset text-query ”football field” (shown in red); path found to the football field (shown in red); car successfully navigates to the destination autonomously. See our anonymized webpage for more results.
-            </p>
+    <!-- Intervention Analysis -->
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Intervention Effectiveness</h2>
+        <div class="columns">
+          <div class="column is-half">
+            <div class="content has-text-centered">
+              <h3 class="title is-5">Multi-Level Interventions</h3>
+              <img src="./static/images/multi_level_interventions.png" alt="Multi-level concept interventions" style="max-width: 100%; height: auto;" />
+            </div>
           </div>
-
+          <div class="column is-half">
+            <div class="content has-text-centered">
+              <h3 class="title is-5">Oracle Interventions</h3>
+              <img src="./static/images/oracle_interventions.png" alt="Oracle intervention analysis" style="max-width: 100%; height: auto;" />
+            </div>
+          </div>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            FoCA-CBMs support more effective interventions than flat concept-based models. By intervening on concepts at appropriate levels in the hierarchy, 
+            users can make targeted corrections that propagate through the model in a semantically meaningful way. Multi-level interventions (left) show how 
+            correcting general concepts affects downstream predictions, while oracle interventions (right) demonstrate the upper-bound performance achievable 
+            through concept interventions.
+          </p>
         </div>
       </div>
-    </div> -->
-    <!--/ Self-driving -->
+    </div>
+    <br/>
+
+    <!-- Qualitative Results -->
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Qualitative Results</h2>
+        <div class="content has-text-centered">
+          <img src="./static/images/qual_result.png" alt="Qualitative results showing concept visualizations" style="max-width: 100%; height: auto;" />
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            Qualitative analysis reveals that FoCA-CBMs learns visually coherent and semantically meaningful concepts. The hierarchical structure ensures that 
+            general concepts (like "texture" or "shape") appear in early layers and are shared across many classes, while specific concepts (like "beak" or "wing" for bird classification) 
+            appear in deeper layers specific to certain classes. This structure aligns well with how humans organize semantic knowledge and improves the 
+            interpretability of the model's decision-making process.
+          </p>
+        </div>
+      </div>
+    </div>
+
   <!-- </div>
 </section> -->
-
-
-<!-- <section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3">Integrating LogicCBMs with Large Language Models</h2>
-    <div class="columns is-centered"> -->
-
-      <!-- GPT video 1 -->
-      <!-- <div class="column">
-        <div class="content">
-          <video id="gpt-video-1" autoplay controls muted playsinline height="100%">
-            <source src="./static/videos/gpt video.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div> -->
-      <!--/ GPT video 1 -->
-
-      <!-- GPT video 2 -->
-      <!-- <div class="column">
-        <div class="content">
-          <video id="gpt-video-2" autoplay controls muted playsinline height="100%">
-            <source src="./static/videos/gpt video2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div> -->
-      <!--/ GPT video 2 -->
-    <!-- </div>
-  </div>
-</section> -->
-
-
-<!-- <script type="text/javascript">
-  $(function() {
-  var screenWidth = $(window).width();
-  if (screenWidth >= 800) {
-    $('#gpt-video-1').attr('autoplay', 'autoplay');
-  }
-  if (screenWidth >= 800) {
-    $('#gpt-video-2').attr('autoplay', 'autoplay');
-  }
-  if (screenWidth >= 800) {
-    $('#click-query-icl').attr('autoplay', 'autoplay');
-  }
-});
-</script> -->
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{logiccbms,
-  author    = {Deepika SN Vemuri and Gautham Bellamkonda and Aditya Pola and Vineeth N Balasubramanian},
-  title     = {LogicCBMs: Logic-Enhanced Concept-Based Learning},
-  journal   = {Winter Conference on Applications of Computer Vision (WACV)},
+   <h2 class="title">BibTeX</h2>
+   <pre><code>@article{focacbms,
+  author    = {Deepika SN Vemuri and Sayanta Adhikari and Ankit Saha and Krishn Vishwas Kher and Vineeth N Balasubramanian},
+  title     = {Formal Concept Lattices are Good Semantic Scaffolds for Concept-Based Learning},
+  journal   = {International Conference on Machine Learning (ICML)},
   year      = {2026}
 }</code></pre>
   </div>
@@ -472,10 +316,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./assets/pdf/2023-LogicCBMs.pdf">
-        <i class="fas fa-file-pdf"></i>
+         href="https://arxiv.org/abs/2606.05471">
+        <i class="ai ai-arxiv"></i>
       </a>
-      <a class="icon-link" href="https://github.com/logiccbms" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/deepikavemuri/FoCA-CBMs" class="external-link">
         <i class="fab fa-github"></i>
       </a>
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
@@ -486,12 +330,10 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website adapted from the Nerfies templates, which is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a href="https://github.com/logiccbms/logiccbms.github.io">source code</a> of this website,
-            we just ask that you link back to the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies source code</a> in the footer.
-            Please remember to remove the analytics code included in the header of the website which you do not want on your website.
+            This website was adapted from the Nerfies website template. We thank the Nerfies team for making their template available.
           </p>
         </div>
       </div>
