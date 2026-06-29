@@ -126,13 +126,18 @@
      
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
+          <div class="content has-text-justified"></div>
           <p>
-            Formal Concept Analysis (FCA) provides a mathematical framework for understanding hierarchical relationships in data. 
+            <!-- Formal Concept Analysis (FCA) provides a mathematical framework for understanding hierarchical relationships in data. 
             In FoCA-CBMs, we leverage formal concept lattices to create structured semantic hierarchies in concept-based models. 
             The key insight is that concepts naturally emerge at different levels of generality in neural networks. 
             Attributes shared by many classes are general (appearing in shallow layers), while those specific to few classes are specialized (appearing in deeper layers). 
-            This allows us to guide where concepts should be learned throughout the network depth, creating a coherent semantic structure aligned with human reasoning.
+            This allows us to guide where concepts should be learned throughout the network depth, creating a coherent semantic structure aligned with human reasoning. -->
+            Inspired by Formal Concept Analysis, we construct a formal concept lattice: a graph-like structure where nodes are obtained and organized hierarchically 
+            from class-attribute associations. We use this lattice to guide the network to learn general concepts early in the network and specific ones later - in effect, 
+            aligning the network with an explicit semantic structure.
           </p>
+          </div>
         </div>
       </div>
   
