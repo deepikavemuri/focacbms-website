@@ -243,6 +243,8 @@
            Standard approaches apply random interventions at the final concept layer, our framework enables level-aware interventions aligned with semantic granularity. 
            Intuitively, coarse misclassifications (e.g., dog vs. elephant) require intervention on general attributes, whereas fine-grained confusions (e.g., dog vs.cat)
            require more specific corrections. FoCA-CBMs enable such multi-level interventions, improving the effectiveness of concept-based corrections and enhancing model interpretability. 
+           Additionally, we evaluate our models intervention effectiveness with respect to random oracle interventions over the whole test set and find that our general-layer interventions yield the highest accuracy
+          gains per oracle intervention.
          </p>
        </div>
      </div>
@@ -258,6 +260,9 @@
          <p>
            Qualitative analysis reveals that FoCA-CBMs learns visually coherent and semantically meaningful class groups. The classes from the clusters of a Vanilla CBM are quite
             mixed up across blocks, whereas a FoCA CBM gradually telescopes relevant concepts.
+            As shown in the above figure, the classes in a Vanilla CBM’s clusters only separate out into the group {black swan, goose} at the last block, being quite noisy throughout. 
+            However in a FoCA-CBM, we observe gradual semantic refinement. The first block captures a mixture of classes, the second block refines it to classes that are associated with water, the third block
+            narrows this down to a set of birds and finally the last block has a separate cluster for {black swan}.
          </p>
        </div>
      </div>
