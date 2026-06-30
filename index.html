@@ -115,189 +115,166 @@
   </div>
 </section>
 
-<section>
-  <div class="container is-max-desktop"> 
-<div class="columns is-centered is-vcentered">
-      <div class="column is-full-width">
-        <div class="arch-figure">
-          <img src="./static/images/main_figure.png" alt="FoCA-CBMs architecture" />
-        </div>
-        
-     
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <div class="content has-text-justified"></div>
-          <p>
-            <!-- Formal Concept Analysis (FCA) provides a mathematical framework for understanding hierarchical relationships in data. 
-            In FoCA-CBMs, we leverage formal concept lattices to create structured semantic hierarchies in concept-based models. 
-            The key insight is that concepts naturally emerge at different levels of generality in neural networks. 
-            Attributes shared by many classes are general (appearing in shallow layers), while those specific to few classes are specialized (appearing in deeper layers). 
-            This allows us to guide where concepts should be learned throughout the network depth, creating a coherent semantic structure aligned with human reasoning. -->
-            Inspired by Formal Concept Analysis, we construct a formal concept lattice: a graph-like structure where nodes are obtained and organized hierarchically 
-            from class-attribute associations. We use this lattice to guide the network to learn general concepts early in the network and specific ones later - in effect, 
-            aligning the network with an explicit semantic structure.
-          </p>
-          </div>
-        </div>
-      </div>
-  
-
-   <section class="section">
-  <div class="container is-max-desktop">
-
-
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Learning semantics is essential for deep learning models to be interpretable and better aligned with human reasoning. Concept-based models approach this by representing classes through meaningful
-            semantic abstractions, but typically treat all concepts as a flat, unstructured set learned at a single neural network layer. This overlooks a fundamental property of human semantic understanding:
-            concepts being organized hierarchically, from general to specific. While deep networks do learn a hierarchy of visual features, this structure is rarely aligned with explicit semantic hierarchies.
-            Drawing on Formal Concept Analysis, we demonstrate that formal concept lattices provide principled semantic scaffolds to guide neural network learning. These lattices naturally identify where in the network concepts should be learned
-            based on their level of generality. This allows the model to develop staged, semantically grounded representations throughout its depth. Empirical results on real-world datasets show that our models produce more interpretable embeddings,
-            support more effective interventions, and learn concept representations that are both meaningful and hierarchically structured.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <div class="columns is-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Key Contributions</h2>
-        <div class="content has-text-justified">
-          <ul>
-            <li><strong>Formal Concept Lattices for Neural Networks:</strong> We propose a principled method to incorporate formal concept lattices into deep neural networks as semantic scaffolds that guide concept learning through the network depth.</li>
-            <li><strong>Hierarchical Concept Organization:</strong> Our approach naturally organizes concepts hierarchically based on their level of generality, aligning the learned representations with human semantic understanding.</li>
-            <li><strong>Improved Interpretability and Interventions:</strong> By structuring concepts hierarchically, FoCA-CBMs enable more effective and targeted concept interventions, improving both interpretability and model performance.</li>
-            <li><strong>Comprehensive Evaluation:</strong> We demonstrate superior performance on multiple real-world datasets (ImageNet100, CIFAR100, AwA2) with detailed analysis of embedding quality, intervention effectiveness, and qualitative concept visualizations.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-  </div>
+<section class="section">
+ <div class="container is-max-desktop">
+   <div class="columns is-centered is-vcentered">
+     <div class="column is-full-width">
+       <div class="arch-figure">
+         <img src="./static/images/main_figure.png" alt="FoCA-CBMs architecture" style="max-width: 70%; height: auto;" />
+       </div>
+       <div class="columns is-centered has-text-centered">
+         <div class="column is-four-fifths">
+           <div class="content has-text-justified">
+             <p>
+               Inspired by Formal Concept Analysis, we construct a formal concept lattice: a graph-like structure where nodes are obtained and organized hierarchically
+               from class-attribute associations. We use this lattice to guide the network to learn general concepts early in the network and specific ones later - in effect,
+               aligning the network with an explicit semantic structure.
+             </p>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
 </section>
 
+<section class="section">
+ <div class="container is-max-desktop">
+   <div class="columns is-centered has-text-centered">
+     <div class="column is-four-fifths">
+       <h2 class="title is-3">Abstract</h2>
+       <div class="content has-text-justified">
+         <p>
+           Learning semantics is essential for deep learning models to be interpretable and better aligned with human reasoning. Concept-based models approach this by representing classes through meaningful
+           semantic abstractions, but typically treat all concepts as a flat, unstructured set learned at a single neural network layer. This overlooks a fundamental property of human semantic understanding:
+           concepts being organized hierarchically, from general to specific. While deep networks do learn a hierarchy of visual features, this structure is rarely aligned with explicit semantic hierarchies.
+           Drawing on Formal Concept Analysis, we demonstrate that formal concept lattices provide principled semantic scaffolds to guide neural network learning. These lattices naturally identify where in the network concepts should be learned
+           based on their level of generality. This allows the model to develop staged, semantically grounded representations throughout its depth. Empirical results on real-world datasets show that our models produce more interpretable embeddings,
+           support more effective interventions, and learn concept representations that are both meaningful and hierarchically structured.
+         </p>
+       </div>
+     </div>
+   </div>
 
+   <div class="columns is-centered">
+     <div class="column is-four-fifths">
+       <h2 class="title is-3">Key Contributions</h2>
+       <div class="content has-text-justified">
+         <ul>
+           <li><strong>Formal Concept Lattices for Neural Networks:</strong> We propose a principled method to incorporate formal concept lattices into deep neural networks as semantic scaffolds that guide concept learning through the network depth.</li>
+           <li><strong>Hierarchical Concept Organization:</strong> Our approach naturally organizes concepts hierarchically based on their level of generality, aligning the learned representations with human semantic understanding.</li>
+           <li><strong>Improved Interpretability and Interventions:</strong> By structuring concepts hierarchically, FoCA-CBMs enable more effective and targeted concept interventions, improving both interpretability and model performance.</li>
+           <li><strong>Comprehensive Evaluation:</strong> We demonstrate superior performance on multiple real-world datasets (ImageNet100, CIFAR100, AwA2) with detailed analysis of embedding quality, intervention effectiveness, and qualitative concept visualizations.</li>
+         </ul>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="container is-max-desktop">
+   <div class="columns is-centered has-text-centered">
+     <div class="column is-nine-tenths">
+       <h2 class="title is-3">Experiments and Analysis</h2>
+       <div class="content has-text-justified">
+         <p>
+           We evaluate FoCA-CBMs on real-world datasets including ImageNet100, CIFAR100, and AwA2.
+           Our experiments demonstrate that formal concept lattices significantly improve the quality of learned representations compared to flat concept-based models.
+           Key findings include:
+         </p>
+         <ul>
+           <li><strong>Better Interpretability:</strong> Embeddings are more aligned with semantic hierarchies, making the model's decisions more explainable</li>
+           <li><strong>Effective Interventions:</strong> Concept-based interventions are more targeted and effective when concepts are organized hierarchically</li>
+           <li><strong>Robust Concept Learning:</strong> Hierarchically-structured concepts are more stable and consistent across different runs</li>
+         </ul>
+       </div>
+     </div>
+   </div>
 
    <div class="columns is-centered has-text-centered">
-      <div class="column is-nine-tenths">
-        <h2 class="title is-3">Experiments and Analysis</h2>
-        <div class="content has-text-justified">
-          <p>
-            We evaluate FoCA-CBMs on real-world datasets including ImageNet100, CIFAR100, and AwA2. 
-            Our experiments demonstrate that formal concept lattices significantly improve the quality of learned representations compared to flat concept-based models. 
-            Key findings include:
-          </p>
-          <ul>
-            <li><strong>Better Interpretability:</strong> Embeddings are more aligned with semantic hierarchies, making the model's decisions more explainable</li>
-            <li><strong>Effective Interventions:</strong> Concept-based interventions are more targeted and effective when concepts are organized hierarchically</li>
-            <li><strong>Robust Concept Learning:</strong> Hierarchically-structured concepts are more stable and consistent across different runs</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-      </div>
-    </div> 
+     <div class="column is-nine-tenths">
+       <div class="content has-text-centered">
+         <img class="main_table" src="./static/images/main_table.png" alt="FoCA main table" style="max-width: 75%; height: auto;" />
+       </div>
+     </div>
+   </div>
 
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-nine-tenths">
-        <div class="content has-text-centered">
-          <img class="main_table" src="./static/images/main_table.png" alt="FoCA main table" style="max-width: 75%; height: auto;"/>
-        </div>
-      </div>
-    </div>
+   <div class="columns is-centered">
+     <div class="column is-half">
+       <h2 class="title is-3">Embedding Hierarchy Analysis</h2>
+       <div class="content has-text-justified">
+         <p>
+           Our analysis shows that FoCA-CBMs naturally organize concept embeddings into hierarchical clusters. General concepts (shared by many classes)
+           form larger, more overlapping clusters, while specialized concepts (specific to few classes) form distinct, well-separated clusters.
+           This hierarchical organization emerges naturally from the formal concept lattice structure without explicit clustering constraints.
+         </p>
+       </div>
+     </div>
+     <div class="column is-half">
+       <div class="content has-text-centered">
+         <img src="./static/images/embedding_clusters.png" alt="Embedding clusters showing hierarchical organization" style="max-width: 100%; height: auto;" />
+       </div>
+     </div>
+   </div>
 
-    <!--/ Main Results Table -->
+   <div class="columns is-centered has-text-centered">
+     <div class="column is-nine-tenths">
+       <h2 class="title is-3">Intervention Effectiveness</h2>
+       <div class="columns">
+         <div class="column is-half">
+           <div class="content has-text-centered">
+             <h3 class="title is-5">Multi-Level Interventions</h3>
+             <img src="./static/images/multi_level_interventions.png" alt="Multi-level concept interventions" style="max-width: 100%; height: auto;" />
+           </div>
+         </div>
+         <div class="column is-half">
+           <div class="content has-text-centered">
+             <h3 class="title is-5">Oracle Interventions</h3>
+             <img src="./static/images/oracle_interventions.png" alt="Oracle intervention analysis" style="max-width: 100%; height: auto;" />
+           </div>
+         </div>
+       </div>
+       <div class="content has-text-justified">
+         <p>
+           FoCA-CBMs support more effective interventions than flat concept-based models. By intervening on concepts at appropriate levels in the hierarchy,
+           users can make targeted corrections that propagate through the model in a semantically meaningful way. Multi-level interventions (left) show how
+           correcting general concepts affects downstream predictions, while oracle interventions (right) demonstrate the upper-bound performance achievable
+           through concept interventions.
+         </p>
+       </div>
+     </div>
+   </div>
 
-    <!-- Embedding Analysis -->
-    <div class="columns is-centered">
-      <div class="column is-half">
-        <div class="content"></div>
-        <h2 class="title is-3">Embedding Hierarchy Analysis</h2>
-        <div class="content has-text-justified">
-          <p>
-            Our analysis shows that FoCA-CBMs naturally organize concept embeddings into hierarchical clusters. General concepts (shared by many classes) 
-            form larger, more overlapping clusters, while specialized concepts (specific to few classes) form distinct, well-separated clusters. 
-            This hierarchical organization emerges naturally from the formal concept lattice structure without explicit clustering constraints.
-          </p>
-        </div>
-        </div>
-      </div>
-    </div>
-
-     <div class="column is-half"></div>
-    <div class="content has-text-centered">
-          <img src="./static/images/embedding_clusters.png" alt="Embedding clusters showing hierarchical organization" style="max-width: 100%; height: auto;" />
-        </div>
-        </div>
-    
-
-    <!-- Intervention Analysis -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-nine-tenths">
-        <h2 class="title is-3">Intervention Effectiveness</h2>
-        <div class="columns">
-          <div class="column is-half">
-            <div class="content has-text-centered">
-              <h3 class="title is-5">Multi-Level Interventions</h3>
-              <img src="./static/images/multi_level_interventions.png" alt="Multi-level concept interventions" style="max-width: 100%; height: auto;" />
-            </div>
-          </div>
-          <div class="column is-half">
-            <div class="content has-text-centered">
-              <h3 class="title is-5">Oracle Interventions</h3>
-              <img src="./static/images/oracle_interventions.png" alt="Oracle intervention analysis" style="max-width: 100%; height: auto;" />
-            </div>
-          </div>
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            FoCA-CBMs support more effective interventions than flat concept-based models. By intervening on concepts at appropriate levels in the hierarchy, 
-            users can make targeted corrections that propagate through the model in a semantically meaningful way. Multi-level interventions (left) show how 
-            correcting general concepts affects downstream predictions, while oracle interventions (right) demonstrate the upper-bound performance achievable 
-            through concept interventions.
-          </p>
-        </div>
-      </div>
-    </div>
-    
-
-    <!-- Qualitative Results -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-nine-tenths">
-        <h2 class="title is-3">Qualitative Results</h2>
-        <div class="content has-text-centered">
-          <img src="./static/images/qual_result.png" alt="Qualitative results showing concept visualizations" style="max-width: 90%; height: auto;" />
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            Qualitative analysis reveals that FoCA-CBMs learns visually coherent and semantically meaningful concepts. The hierarchical structure ensures that 
-            general concepts (like "texture" or "shape") appear in early layers and are shared across many classes, while specific concepts (like "beak" or "wing" for bird classification) 
-            appear in deeper layers specific to certain classes. This structure aligns well with how humans organize semantic knowledge and improves the 
-            interpretability of the model's decision-making process.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  <!-- </div>
-</section> -->
-
+   <div class="columns is-centered has-text-centered">
+     <div class="column is-nine-tenths">
+       <h2 class="title is-3">Qualitative Results</h2>
+       <div class="content has-text-centered">
+         <img src="./static/images/qual_result.png" alt="Qualitative results showing concept visualizations" style="max-width: 90%; height: auto;" />
+       </div>
+       <div class="content has-text-justified">
+         <p>
+           Qualitative analysis reveals that FoCA-CBMs learns visually coherent and semantically meaningful concepts. The hierarchical structure ensures that
+           general concepts (like "texture" or "shape") appear in early layers and are shared across many classes, while specific concepts (like "beak" or "wing" for bird classification)
+           appear in deeper layers specific to certain classes. This structure aligns well with how humans organize semantic knowledge and improves the
+           interpretability of the model's decision-making process.
+         </p>
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
 
 <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
+ <div class="container is-max-desktop content">
    <h2 class="title">BibTeX</h2>
    <pre><code>@article{focacbms,
-  author    = {Deepika SN Vemuri and Sayanta Adhikari and Ankit Saha and Krishn Vishwas Kher and Vineeth N Balasubramanian},
-  title     = {Formal Concept Lattices are Good Semantic Scaffolds for Concept-Based Learning},
-  journal   = {International Conference on Machine Learning (ICML)},
-  year      = {2026}
+ author    = {Deepika SN Vemuri and Sayanta Adhikari and Ankit Saha and Krishn Vishwas Kher and Vineeth N Balasubramanian},
+ title     = {Formal Concept Lattices are Good Semantic Scaffolds for Concept-Based Learning},
+ journal   = {International Conference on Machine Learning (ICML)},
+ year      = {2026}
 }</code></pre>
-  </div>
+ </div>
 </section>
 
 <footer class="footer">
