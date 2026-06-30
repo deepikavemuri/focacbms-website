@@ -125,6 +125,7 @@
        <div class="columns is-centered has-text-centered">
          <div class="column is-four-fifths">
            <div class="content has-text-justified">
+            <br>
              <p>
                Inspired by Formal Concept Analysis, we construct a formal concept lattice: a graph-like structure where nodes are obtained and organized hierarchically
                from class-attribute associations. We use this lattice to guide the network to learn general concepts early in the network and specific ones later - in effect,
@@ -157,7 +158,7 @@
    </div>
 
    <div class="columns is-centered">
-     <div class="column is-four-fifths">
+     <div class="column is-nine-tenths">
        <h2 class="title is-3">Key Contributions</h2>
        <div class="content has-text-justified">
          <ul>
@@ -201,14 +202,14 @@
    </div>
 
    <div class="columns is-centered">
+    <h3 class="title is-3">Embedding Hierarchy Analysis</h3>
      <div class="column is-half">
-       <h2 class="title is-3">Embedding Hierarchy Analysis</h2>
        <div class="content has-text-justified">
          <p>
-           Our analysis shows that FoCA-CBMs naturally organize concept embeddings into hierarchical clusters. General concepts (shared by many classes)
-           form larger, more overlapping clusters, while specialized concepts (specific to few classes) form distinct, well-separated clusters.
-           This hierarchical organization emerges naturally from the formal concept lattice structure without explicit clustering constraints.
-         </p>
+          We analyze the embeddings per block of the models to understand  the impact of the formal concept lattice on the learned representations.
+          The embeddings from a FoCA-CBM show a clear progression, with meaning clusters separating out gradually over blocks; whereas the embeddings from a 
+          Vanilla CBM are quite mixed up, separating out in the final block.
+        </p>
        </div>
      </div>
      <div class="column is-half">
@@ -220,7 +221,7 @@
 
    <div class="columns is-centered has-text-centered">
      <div class="column is-nine-tenths">
-       <h2 class="title is-3">Intervention Effectiveness</h2>
+       <h3 class="title is-3">Interventions</h3>
        <div class="columns">
          <div class="column is-half">
            <div class="content has-text-centered">
@@ -237,10 +238,9 @@
        </div>
        <div class="content has-text-justified">
          <p>
-           FoCA-CBMs support more effective interventions than flat concept-based models. By intervening on concepts at appropriate levels in the hierarchy,
-           users can make targeted corrections that propagate through the model in a semantically meaningful way. Multi-level interventions (left) show how
-           correcting general concepts affects downstream predictions, while oracle interventions (right) demonstrate the upper-bound performance achievable
-           through concept interventions.
+           Standard approaches apply random interventions at the final concept layer, our framework enables level-aware interventions aligned with semantic granularity. 
+           Intuitively, coarse misclassifications (e.g., dog vs. elephant) require intervention on general attributes, whereas fine-grained confusions (e.g., dog vs.cat)
+           require more specific corrections. FoCA-CBMs enable such multi-level interventions, improving the effectiveness of concept-based corrections and enhancing model interpretability. 
          </p>
        </div>
      </div>
@@ -248,16 +248,14 @@
 
    <div class="columns is-centered has-text-centered">
      <div class="column is-nine-tenths">
-       <h2 class="title is-3">Qualitative Results</h2>
+       <h3 class="title is-3">Qualitative Results</h3>
        <div class="content has-text-centered">
          <img src="./static/images/qual_result.png" alt="Qualitative results showing concept visualizations" style="max-width: 90%; height: auto;" />
        </div>
        <div class="content has-text-justified">
          <p>
-           Qualitative analysis reveals that FoCA-CBMs learns visually coherent and semantically meaningful concepts. The hierarchical structure ensures that
-           general concepts (like "texture" or "shape") appear in early layers and are shared across many classes, while specific concepts (like "beak" or "wing" for bird classification)
-           appear in deeper layers specific to certain classes. This structure aligns well with how humans organize semantic knowledge and improves the
-           interpretability of the model's decision-making process.
+           Qualitative analysis reveals that FoCA-CBMs learns visually coherent and semantically meaningful class groups. The classes from the clusters of a Vanilla CBM are quite
+            mixed up across blocks, whereas a FoCA CBM gradually telescopes relevant concepts.
          </p>
        </div>
      </div>
